@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GenZ Health</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-pink-50 text-gray-800 font-sans">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>GenZ Health Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body class="bg-[#f9fbfc] text-gray-700">
+  
+  <!-- Navbar -->
+  <nav class="w-full px-4 md:px-10 py-3 bg-gradient-to-r from-[#e7f0fa] to-[#f1f6f9] shadow-md z-50 relative">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <span class="text-xl sm:text-2xl font-bold text-[#7b9acc]">MediCare+</span>
+      </div>
+  
+      <!-- Desktop Nav -->
+      <ul class="hidden lg:flex items-center gap-6 text-sm font-medium">
+        <li><a href="#" class="hover:text-[#5e8aa7] transition">Home</a></li>
+        <li><a href="#" class="hover:text-[#5e8aa7] transition">Health Issues</a></li>
+        <li><a href="#" class="hover:text-[#5e8aa7] transition">Menstrual Care</a></li>
+        <li><a href="track.html" class="hover:text-[#5e8aa7] transition">Track Cycle</a></li>
+        <li><a href="#" class="hover:text-[#5e8aa7] transition">Book Doctor</a></li>
+      </ul>
+  
+      <!-- Right side -->
+      <div class="flex items-center gap-3">
+        <!-- Delivery Address Toggle -->
+        <button onclick="toggleAddressInput()" class="text-[#7b9acc] hover:text-[#5e8aa7]" title="Enter Delivery Address">
+          <i data-lucide="map-pin" class="w-6 h-6"></i>
+        </button>
+  
+        <!-- Address Box -->
+        <div id="addressBox"
+        class="absolute top-16 right-4 sm:right-10 bg-white p-3 rounded-xl shadow-lg hidden w-64 z-50">
+     <a href="location.html" class="block w-full h-full">
+       <!-- Add inner content or text here -->
+       Go to Location Page
+     </a>
+   </div>
+   
+  
+        <!-- Login Button -->
+        <button onclick="window.location.href='login.html'" class="hidden sm:block bg-[#aac9e6] hover:bg-[#94b8dd] text-white text-sm px-4 py-2 rounded-full shadow-md transition">
+          Login / Signup
+        </button>
+        
+  
+        <!-- Mobile Menu Toggle -->
+        <button type="button" class="lg:hidden" onclick="toggleMobileMenu()" title="Toggle Mobile Menu">
+          <i data-lucide="menu" class="w-6 h-6 text-[#7b9acc]"></i>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="lg:hidden hidden mt-4">
+      <ul class="flex flex-col gap-3 text-sm font-medium">
+        <li><a href="#" class="hover:text-[#5e8aa7] transition">Home</a></li>
+        <li><a href="#" class="hover:text-[#5e8aa7] transition">Health Issues</a></li>
+        <li><a href="#" class="hover:text-[#5e8aa7] transition">Menstrual Care</a></li>
+        <li><a href="track.html" class="hover:text-[#5e8aa7] transition">Track Cycle</a></li>
+        <li><a href="#" class="hover:text-[#5e8aa7] transition">Book Doctor</a></li>
+        <li>
+          <a href="login.html" class="bg-[#aac9e6] hover:bg-[#94b8dd] text-white text-sm px-4 py-2 rounded-full w-full text-center block transition duration-300">
+            Login / Signup
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+  
+  <section class="w-full bg-gradient-to-br from-[#f4f9fb] to-[#eaf3f9] py-16 px-4 sm:px-8 lg:px-20 text-center">
+    <!-- Health Essentials Header Section -->
+<section class="w-full bg-gradient-to-br from-[#edf7fa] to-[#e7f4f2] py-10 px-4 sm:px-10">
+  <div class="max-w-7xl mx-auto">
+    <!-- Top: Title + Search -->
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+      <div class="text-center lg:text-left">
+        <h2 class="text-3xl sm:text-4xl font-bold text-[#5e8aa7] mb-2">🌿 Health & Wellness Essentials</h2>
+        <p class="text-gray-600 text-md">Browse resources to support your body through every cycle and health phase.</p>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="w-full lg:w-1/2 mt-4 lg:mt-0">
+        <div class="flex items-center bg-white border border-gray-200 rounded-xl shadow-sm px-4 py-2">
+          <svg class="w-5 h-5 text-gray-400 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input type="text" placeholder="Search Wellness Tools" class="w-full outline-none bg-transparent text-gray-700" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom: Buttons -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-10">
+      <a href="pharmacy.html" class="bg-[#d8f4f2] hover:bg-[#c1eae8] text-center p-4 rounded-2xl shadow-sm transition">
+        <div class="text-2xl">🏪</div>
+        <p class="text-sm font-medium text-gray-700 mt-2">Pharmacy Near Me</p>
+      </a>
+    
+      <a href="track.html" class="bg-[#e2f7f4] hover:bg-[#c5ebe7] text-center p-4 rounded-2xl shadow-sm transition">
+        <div class="text-2xl">🌸</div>
+        <p class="text-sm font-medium text-gray-700 mt-2">Track My Cycle</p>
+      </a>
+      
+    
+      <a href="#search-issues" class="bg-[#f0f8fc] hover:bg-[#dcecf7] text-center p-4 rounded-2xl shadow-sm transition">
+        <div class="text-2xl">🔍</div>
+        <p class="text-sm font-medium text-gray-700 mt-2">Search Health Issues</p>
+      </a>
+    
+      <a href="#appointments" class="bg-[#ede9fb] hover:bg-[#dfd4f9] text-center p-4 rounded-2xl shadow-sm transition">
+        <div class="text-2xl">👩‍⚕️</div>
+        <p class="text-sm font-medium text-gray-700 mt-2">Doctor Booking</p>
+      </a>
+      <a href="gyno.html" class="bg-[#fef0f3] hover:bg-[#fcd4dc] text-center p-4 rounded-2xl shadow-sm transition">
+        <div class="text-2xl">♀️</div>
+        <p class="text-sm font-medium text-gray-700 mt-2">Talk to Gyno</p>
+    </a>
+    
+    </div>
+    
+</section>
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="search-issues">
+  <h2 class="text-3xl font-bold text-center text-[#7b68ee] mb-12">🌸 Common Women’s Health Issues</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    
+    <!-- Card 1 - PCOS -->
+    <div class="bg-white border border-purple-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition transform hover:scale-[1.02] group">
+      <div class="w-full h-48 overflow-hidden">
+        <img src="https://diabetesonthenet.com/wp-content/uploads/PCOS-shutterstock_2232218973.jpg" alt="PCOS"
+             class="w-full h-full object-cover transition duration-500 group-hover:scale-105"/>
+      </div>
+      <div class="p-6 bg-gradient-to-br from-[#f6f0ff] to-[#faf9fe]">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-3">Polycystic Ovary Syndrome (PCOS)</h3>
+        <p class="text-sm text-gray-600 mb-4">
+          A hormonal imbalance that causes irregular periods, weight gain, acne, and excessive hair growth. Can affect fertility.
+        </p>
+        <a href="pcos.html" class="bg-[#e3dcff] hover:bg-[#d0c5ff] text-[#4a3e9c] px-4 py-2 rounded-full text-sm font-semibold transition shadow hover:shadow-md inline-block">
+          Full Details
+        </a>
+        
+      </div>
+    </div>
+
+    <!-- Card 2 - Endometriosis -->
+    <div class="bg-white border border-purple-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition transform hover:scale-[1.02] group">
+      <div class="w-full h-48 overflow-hidden">
+        <img src="https://flo.health/uploads/media/sulu-1200x630/07/8517-endometriosis%20on%20ovaries1006x755.jpg?v=1-0&inline=1" alt="Endometriosis"
+             class="w-full h-full object-cover transition duration-500 group-hover:scale-105"/>
+      </div>
+      <div class="p-6 bg-gradient-to-br from-[#f6f0ff] to-[#faf9fe]">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-3">Endometriosis</h3>
+        <p class="text-sm text-gray-600 mb-4">
+          A painful condition where uterine-like tissue grows outside the uterus, leading to pain, cramping, and infertility.
+        </p>
+        <button onclick="showDetails('endometriosis')" class="bg-[#e3dcff] hover:bg-[#d0c5ff] text-[#4a3e9c] px-4 py-2 rounded-full text-sm font-semibold transition shadow hover:shadow-md">
+          Full Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 3 - UTI -->
+    <div class="bg-white border border-purple-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition transform hover:scale-[1.02] group">
+      <div class="w-full h-48 overflow-hidden">
+        <img src="https://myhealth-redcliffelabs.redcliffelabs.com/media/blogcard-images/3320/4454e79a-515c-4b4d-ab91-0fe9d832f205.webp" alt="UTI"
+             class="w-full h-full object-cover transition duration-500 group-hover:scale-105"/>
+      </div>
+      <div class="p-6 bg-gradient-to-br from-[#f6f0ff] to-[#faf9fe]">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-3">Urinary Tract Infections (UTIs)</h3>
+        <p class="text-sm text-gray-600 mb-4">
+          Causes include bacteria entering the urinary tract. Symptoms are pain while urinating, urgency, and cloudy urine.
+        </p>
+        <button onclick="showDetails('uti')" class="bg-[#e3dcff] hover:bg-[#d0c5ff] text-[#4a3e9c] px-4 py-2 rounded-full text-sm font-semibold transition shadow hover:shadow-md">
+          Full Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 4 - PMS -->
+    <div class="bg-white border border-purple-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition transform hover:scale-[1.02] group">
+      <div class="w-full h-48 overflow-hidden">
+        <img src="https://thumbs.dreamstime.com/b/pms-woman-suffering-premenstrual-syndrome-set-menstrual-cycle-symptoms-pms-woman-suffering-premenstrual-syndrome-set-178967699.jpg" alt="PMS"
+             class="w-full h-full object-cover transition duration-500 group-hover:scale-105"/>
+      </div>
+      <div class="p-6 bg-gradient-to-br from-[#f6f0ff] to-[#faf9fe]">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-3">Premenstrual Syndrome (PMS)</h3>
+        <p class="text-sm text-gray-600 mb-4">
+          Mood swings, bloating, and fatigue before periods. Often managed with exercise, hydration, and a healthy diet.
+        </p>
+        <button onclick="showDetails('pms')" class="bg-[#e3dcff] hover:bg-[#d0c5ff] text-[#4a3e9c] px-4 py-2 rounded-full text-sm font-semibold transition shadow hover:shadow-md">
+          Full Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 5 - Vaginal Infections -->
+    <div class="bg-white border border-purple-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition transform hover:scale-[1.02] group">
+      <div class="w-full h-48 overflow-hidden">
+        <img src="https://as2.ftcdn.net/jpg/03/19/10/53/1000_F_319105378_AaYLTIGiK3ExaT1oDxkUTtTTzHeOFRcG.jpg" alt="Infections"
+             class="w-full h-full object-cover transition duration-500 group-hover:scale-105"/>
+      </div>
+      <div class="p-6 bg-gradient-to-br from-[#f6f0ff] to-[#faf9fe]">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-3">Vaginal Infections</h3>
+        <p class="text-sm text-gray-600 mb-4">
+          Bacterial or yeast infections cause itching, discharge, and irritation. Treatment depends on the type of infection.
+        </p>
+        <button onclick="showDetails('infection')" class="bg-[#e3dcff] hover:bg-[#d0c5ff] text-[#4a3e9c] px-4 py-2 rounded-full text-sm font-semibold transition shadow hover:shadow-md">
+          Full Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 6 - Breast Cancer -->
+    <div class="bg-white border border-purple-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition transform hover:scale-[1.02] group">
+      <div class="w-full h-48 overflow-hidden">
+        <img src="https://media.istockphoto.com/id/1792461933/video/4k-abstract-animation-of-a-woman-with-breast-cancer.jpg?s=640x640&k=20&c=R7_E30Gk5aPSJLaZ_OtqUzvotSquOaSDxk3TCXnIOPo=" alt="Breast Cancer"
+             class="w-full h-full object-cover transition duration-500 group-hover:scale-105"/>
+      </div>
+      <div class="p-6 bg-gradient-to-br from-[#f6f0ff] to-[#faf9fe]">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-3">Breast Cancer</h3>
+        <p class="text-sm text-gray-600 mb-4">
+          Cancer that develops in breast tissue. Early signs include lumps, changes in shape, or discharge. Early detection is key.
+        </p>
+        <button onclick="showDetails('breastcancer')" class="bg-[#e3dcff] hover:bg-[#d0c5ff] text-[#4a3e9c] px-4 py-2 rounded-full text-sm font-semibold transition shadow hover:shadow-md">
+          Full Details
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="bg-gradient-to-br from-[#fefaff] to-[#f7f9fb] py-16 px-4 sm:px-8 lg:px-20" id="teen-corner">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center text-[#7b68ee] mb-10">🌼 Teen Corner: Your Safe Space</h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- First Period Guide -->
+      <div class="bg-white border border-purple-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-2">🩸 First Period Guide</h3>
+        <p class="text-sm text-gray-600">
+          Wondering what your first period will feel like? Learn signs to watch for, how to prepare emotionally and physically, and what products to try!
+        </p>
+        <a href="#" class="mt-3 inline-block text-sm text-[#7b68ee] font-medium hover:underline">Read More</a>
+      </div>
+
+      <!-- Talking to Parents -->
+      <div class="bg-white border border-purple-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-2">🗣️ Talking to Parents</h3>
+        <p class="text-sm text-gray-600">
+          Scared to talk about periods at home? Here's how to open up to your parents and break the awkwardness with confidence and calm.
+        </p>
+        <a href="#" class="mt-3 inline-block text-sm text-[#7b68ee] font-medium hover:underline">Read More</a>
+      </div>
+
+      <!-- Periods at School -->
+      <div class="bg-white border border-purple-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-2">🏫 Periods in School</h3>
+        <p class="text-sm text-gray-600">
+          From surprise cramps to forgetting pads — we've got hacks to help you handle periods at school like a pro (without panic).
+        </p>
+        <a href="#" class="mt-3 inline-block text-sm text-[#7b68ee] font-medium hover:underline">Read More</a>
+      </div>
+
+      <!-- What to Carry -->
+      <div class="bg-white border border-purple-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-2">🎒 Period Kit Checklist</h3>
+        <p class="text-sm text-gray-600">
+          Every teen needs a period emergency pouch! Here's what to pack: pads, wipes, undies, mini heat patch, and confidence.
+        </p>
+        <a href="#" class="mt-3 inline-block text-sm text-[#7b68ee] font-medium hover:underline">Read More</a>
+      </div>
+
+      <!-- Emotional & Body Changes -->
+      <div class="bg-white border border-purple-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-2">🧠 Emotions & Body Changes</h3>
+        <p class="text-sm text-gray-600">
+          Mood swings? Cramps? Boob pain? Puberty’s a lot, and it's okay! Here's how to ride the wave with self-love and sanity.
+        </p>
+        <a href="#" class="mt-3 inline-block text-sm text-[#7b68ee] font-medium hover:underline">Read More</a>
+      </div>
+
+      <!-- Hygiene & Myths -->
+      <div class="bg-white border border-purple-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-2">🚫 Period Myths & Hygiene</h3>
+        <p class="text-sm text-gray-600">
+          “Don’t shower on your period” — um, false! Let’s bust common period myths and show you how to stay fresh & clean.
+        </p>
+        <a href="#" class="mt-3 inline-block text-sm text-[#7b68ee] font-medium hover:underline">Read More</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-[#fefaff] to-[#f7f9fb] py-16 px-4 sm:px-8 lg:px-20" id="period-products">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center text-[#7b68ee] mb-10">🛍️ Products to Use During Your Period</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-cards">
+
+      <!-- Pads -->
+      <div class="card bg-white border border-purple-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-2">🩲 Sanitary Pads</h3>
+        <p class="text-sm text-gray-600">Best for beginners! Easy to use, comfortable, and available everywhere.</p>
+        <button class="mt-3 text-sm text-[#7b68ee] font-medium hover:underline read-more">Read More</button>
+        <div class="extra-content hidden mt-3 text-sm text-gray-600 transition-all duration-300">
+          Pads stick to your underwear and absorb flow. Change every 4–6 hours. They come in thin (pantyliners) to thick (overnight) types. Great for heavy days and newbies!
+        </div>
+      </div>
+
+      <!-- Tampons -->
+      <div class="card bg-white border border-purple-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-2">🧵 Tampons</h3>
+        <p class="text-sm text-gray-600">Small, discreet, and inserted inside. Good for active days or swimming!</p>
+        <button class="mt-3 text-sm text-[#7b68ee] font-medium hover:underline read-more">Read More</button>
+        <div class="extra-content hidden mt-3 text-sm text-gray-600 transition-all duration-300">
+          Tampons go inside the vaginal canal and absorb blood. Always wash your hands, and never keep them in for more than 8 hours to avoid health risks (like TSS). Available with or without applicators.
+        </div>
+      </div>
+
+      <!-- Menstrual Cups -->
+      <div class="card bg-white border border-purple-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-2">🥣 Menstrual Cups</h3>
+        <p class="text-sm text-gray-600">Eco-friendly & reusable. Inserted like a tampon, but it collects instead of absorbs.</p>
+        <button class="mt-3 text-sm text-[#7b68ee] font-medium hover:underline read-more">Read More</button>
+        <div class="extra-content hidden mt-3 text-sm text-gray-600 transition-all duration-300">
+          Made of medical-grade silicone, cups hold your flow for up to 12 hours. Fold, insert, and go! Rinse and reuse. Perfect if you're eco-conscious and don’t mind a learning curve.
+        </div>
+      </div>
+
+      <!-- Period Underwear -->
+      <div class="card bg-white border border-purple-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-2">🩳 Period Underwear</h3>
+        <p class="text-sm text-gray-600">Leak-proof undies that absorb blood. Super comfy & reusable!</p>
+        <button class="mt-3 text-sm text-[#7b68ee] font-medium hover:underline read-more">Read More</button>
+        <div class="extra-content hidden mt-3 text-sm text-gray-600 transition-all duration-300">
+          Looks like regular underwear but has super-absorbent layers built in. Wear alone or as backup. Rinse after use, machine wash, air dry. Great for school days or sleep.
+        </div>
+      </div>
+
+      <!-- Panty Liners -->
+      <div class="card bg-white border border-purple-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-2">🩱 Panty Liners</h3>
+        <p class="text-sm text-gray-600">Perfect for light spotting or daily freshness.</p>
+        <button class="mt-3 text-sm text-[#7b68ee] font-medium hover:underline read-more">Read More</button>
+        <div class="extra-content hidden mt-3 text-sm text-gray-600 transition-all duration-300">
+          Liners are super thin pads for light flow or discharge. Use them at the beginning or end of your period, or daily if you like extra protection. Just change every few hours!
+        </div>
+      </div>
+
+      <!-- Heating Patches -->
+      <div class="card bg-white border border-purple-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-xl font-bold text-[#6a5acd] mb-2">🔥 Heating Patches</h3>
+        <p class="text-sm text-gray-600">Period cramps? These stick-on patches soothe pain and keep you moving!</p>
+        <button class="mt-3 text-sm text-[#7b68ee] font-medium hover:underline read-more">Read More</button>
+        <div class="extra-content hidden mt-3 text-sm text-gray-600 transition-all duration-300">
+          Stick a patch on your belly or back — it warms up and relaxes muscles. You can wear them under clothes, at school, or even while sleeping. No pills, just cozy relief!
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer class="bg-[#f4f2ff] text-gray-700 pt-10 pb-6 px-6 sm:px-10 mt-16">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+    <!-- About -->
+    <div>
+      <h4 class="text-lg font-bold text-[#6a5acd] mb-3">🌸 MediCare+ by GenZ Health</h4>
+      <p class="text-sm text-gray-600">
+        Empowering teens with honest, helpful period care, health tips, and real talk. Your safe space for all things health. 💖
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="text-lg font-bold text-[#6a5acd] mb-3">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#teen-corner" class="hover:underline hover:text-[#7b68ee]">Teen Corner</a></li>
+        <li><a href="#period-products" class="hover:underline hover:text-[#7b68ee]">Period Products</a></li>
+        <li><a href="#symptom-checker" class="hover:underline hover:text-[#7b68ee]">Symptom Checker</a></li>
+        <li><a href="#contact" class="hover:underline hover:text-[#7b68ee]">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h4 class="text-lg font-bold text-[#6a5acd] mb-3">Contact Us</h4>
+      <ul class="text-sm text-gray-600 space-y-2">
+        <li>📧 <a href="mailto:support@genzhealth.com" class="hover:underline">support@genzhealth.com</a></li>
+        <li>📍 GenZ HQ, Wellness Street, India</li>
+      </ul>
+    </div>
+
+    <!-- Socials -->
+    <div>
+      <h4 class="text-lg font-bold text-[#6a5acd] mb-3">Follow Us</h4>
+      <div class="flex space-x-4 text-[#7b68ee] text-xl">
+        <a href="#"><i class="fab fa-instagram hover:text-pink-500 transition"></i></a>
+        <a href="#"><i class="fab fa-twitter hover:text-blue-400 transition"></i></a>
+        <a href="#"><i class="fab fa-youtube hover:text-red-500 transition"></i></a>
+        <a href="#"><i class="fab fa-facebook hover:text-blue-600 transition"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-6 border-purple-200" />
+
+  <!-- Copyright -->
+  <div class="text-center text-sm text-gray-500">
+    © <span id="year"></span> MediCare+ | Built with 💜 for Gen Z
+  </div>
+</footer>
+<script src="script.js">
+  
+</script>
+
+</body>
+</html>

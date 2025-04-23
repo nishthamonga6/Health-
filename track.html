@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Track My Period</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .accordion-content { display: none; }
+    .accordion-open .accordion-content { display: block; }
+  </style>
+</head>
+<body class="bg-[#f9fbfc] text-gray-700">
+
+  <!-- 💬 Quotes + Header -->
+  <section class="text-center py-12 bg-gradient-to-r from-[#e8f7f7] to-[#d6ecf9]">
+    <h1 class="text-4xl sm:text-5xl font-bold text-[#5e8aa7] mb-4">🌸 Track My Period</h1>
+    <p class="text-lg italic text-gray-600 max-w-2xl mx-auto">"Taking care of yourself is powerful, not selfish." 💖</p>
+  </section>
+
+  <!-- 📝 Tracker + 📜 History Side-by-Side -->
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto p-6">
+    <!-- Tracker Form -->
+    <div class="bg-white p-6 rounded-3xl shadow">
+      <h2 class="text-xl font-semibold text-[#5e8aa7] mb-4">🗓️ Enter Your Cycle</h2>
+      <form id="trackerForm" class="space-y-4">
+        <label for="startDate" class="block text-sm font-medium text-gray-700">Start Date</label>
+        <input type="date" id="startDate" class="w-full p-3 border rounded-xl" title="Select the start date of your cycle" placeholder="Start Date" required />
+        <input type="number" id="cycleLength" class="w-full p-3 border rounded-xl" min="20" max="40" value="28" placeholder="Cycle Length" required />
+        <button class="bg-[#bfe3e1] px-4 py-2 rounded-full hover:bg-[#aad9d7]">Predict 📅</button>
+      </form>
+      <div id="result" class="mt-4 text-[#4a7a90] font-medium"></div>
+    </div>
+    
+    <!-- Cycle History -->
+    <div class="bg-white p-6 rounded-3xl shadow">
+      <h2 class="text-xl font-semibold text-[#5e8aa7] mb-4">📜 Cycle History</h2>
+      <ul id="historyList" class="space-y-2 text-sm text-gray-700"></ul>
+    </div>
+  </section>
+
+  <!-- 🩺 Period Problems -->
+
+    <section class="max-w-6xl mx-auto px-4 py-12">
+  <h2 class="text-3xl font-bold text-center text-[#5e8aa7] mb-10">🩺 Common Period Problems</h2>
+
+  <div id="problemCards" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Cards will be injected here -->
+  </div>
+
+  <!-- Modal for full info -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-xl max-w-md shadow-lg relative">
+      <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl font-bold">×</button>
+      <h3 id="modalTitle" class="text-xl font-bold mb-2 text-[#5e8aa7]"></h3>
+      <p id="modalContent" class="text-gray-700 text-sm leading-relaxed"></p>
+    </div>
+  </div>
+</section>
+  <!-- JS -->
+  <script src="track.js"></script>
+</body>
+</html>
