@@ -12,9 +12,6 @@ A vibrant, professional, and Gen Z-styled frontend feature that lets users **sea
 - 💬 **Real-time Online Status** indicators.
 - 💖 **Cute, Accessible & Gen Z-friendly UI** with pastel gradients, animations, and emoji enhancements.
 
-## 📸 Preview
-
-![screenshot](https://your-screenshot-url.png) <!-- Optional -->
 
 ---
 
